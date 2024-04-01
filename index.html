@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <div class="heading">
+        <h1>Todo</h1>
+        <button
+          id="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Change to light theme"
+        >
+          <img class="iconMode" src="./images/icon-sun.svg" />
+        </button>
+      </div>
+      <div class="input-container">
+        <form action="/" method="POST">
+          <input
+            type="text"
+            class="input-task"
+            id="inputTask"
+            name="task"
+            value=""
+            required
+          />
+        </form>
+      </div>
+
+      <div class="list-container">
+        <ul class="listTasks"></ul>
+        <ul class="listFilter">
+          <li><span class="btnFooter itemsLeft">0</span> items left</li>
+          <li><button class="btnFilter allTasks active">All</button></li>
+          <li><button class="btnFilter activated">Active</button></li>
+          <li><button class="btnFilter completed">Completed</button></li>
+          <li><button class="btnFooter clear">Clear Completed</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="drag">Drag and drop to reorder list</p>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Sonia</a>.
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

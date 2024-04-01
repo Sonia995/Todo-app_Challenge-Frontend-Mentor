@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* Dark theme */
+:root {
+  --background-color: hsl(235, 21%, 11%);
+  --text-color: hsl(234, 39%, 85%);
+  --background-image: url("./images/bg-desktop-dark.jpg");
+  --bg-container-color: hsl(235, 24%, 19%);
+  --text-container-color: hsl(234, 39%, 85%);
+}
+
+/* light theme */
+.light-theme {
+  --background-color: hsl(236, 33%, 92%);
+  --text-color: hsl(235, 19%, 35%);
+  --background-image: url("./images/bg-desktop-light.jpg");
+  --bg-container-color: hsl(0, 0%, 98%);
+  --text-container-color: hsl(237, 14%, 26%);
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--text-color);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  min-width: 100%;
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.heading h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.heading button {
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.heading img {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+
+.container {
+  position: relative;
+  top: -200px;
+  max-width: 75%;
+}
+
+.input-container form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row;
+}
+
+.input-task {
+  border-radius: 3px;
+  background-color: var(--bg-container-color);
+  width: 400px;
+  color: var(--text-container-color);
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+}
+
+.list-container {
+  color: var(--text-container-color);
+  background-color: var(--bg-container-color);
+  border-radius: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.listTasks {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.listTasks li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 18px;
+  padding: 20px;
+  border-bottom: 1px solid hsl(234, 39%, 85%);
+  
+}
+
+.listTasks li:hover {
+ border: 1px solid darkgrey;
+}
+
+.hideTasks {
+  display: none !important;
+}
+
+.task {
+  flex: 2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 300px;
+ 
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  margin-right: 15px;
+  width: 1.3em;
+  height: 1.3em;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid hsl(228, 45%, 44%);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url("./images/icon-check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.check {
+  text-decoration: line-through;
+  color: hsl(234, 39%, 85%);
+}
+
+.delete {
+  margin-left: 10px;
+  background-image: url("./images/icon-cross.svg");
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+.listFilter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.listFilter li {
+  list-style: none;
+  padding: 10px;
+  font-size: 12px;
+}
+.btnFooter,
+.btnFilter {
+  background: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+.active {
+  color: #0919A8;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+
+/* 
+.drag-item {
+  background-color: #CC56FF;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: move;
+} */
